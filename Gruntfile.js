@@ -6,7 +6,7 @@ module.exports = grunt => {
         sass: {
             dist: {
                 files: {
-                    'styles/style.css': 'styles/style.scss'
+                    'public/styles/style.css': 'public/styles/style.scss'
                 }
             },
             options: {
