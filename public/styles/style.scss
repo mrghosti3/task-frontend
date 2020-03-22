@@ -1,0 +1,55 @@
+$main-color: #fff;
+
+body {
+    margin: 0;
+
+    //background-image: url("../assets/background.jpg");
+    background-color: blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    color: $main-color;
+
+    a {
+        color: $main-color;
+        text-decoration: none;
+    }
+}
+
+header {
+    padding-left: 2em;
+    padding-right: 2em;
+
+    div {
+        margin: auto;
+        display: flex;
+    }
+}
+
+.navbar {
+    max-width: 900px;
+}
+
+.navbar-nav {
+    display: flex;
+
+    list-style: none;
+}
+
+.nav-item {
+    padding-right: 20px;
+
+    p {
+        margin: 0;
+    }
+}
+
+@mixin margin-value($pt, $name, $value) {
+    .m#{$pt}-#{$value} {
+        margin-#{$name}: $value;
+    }
+}
+
+@include margin-value("l", "left", auto);
+@include margin-value("r", "right", auto);
