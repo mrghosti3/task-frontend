@@ -1,13 +1,45 @@
 import React from 'react';
+import Navbar from './components/Navbar';
 import Timer from './components/Timer';
 
-function App() {
-  return (
-    <div>
-      <p>Hello world</p>
-      <Timer time="00:00:00:05"/>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    header: {
+      menuList: [
+        {
+          link: '#',
+          text: 'Web Hosting'
+        },
+        {
+          link: '#',
+          text: 'Cloud Hosting',
+          highlight: 'on sale'
+        },
+        {
+          link: '#',
+          text: 'VPS Hosting'
+        },
+        {
+          link: '#',
+          text: 'Domain checker'
+        },
+        {
+          link: '#',
+          text: 'Website Builder'
+        }
+      ]
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar header={this.state.header} />
+        <p>Hello world</p>
+        <Timer time="00:00:00:05"/>
+      </div>
+    );
+  }
 }
 
 export default App;
