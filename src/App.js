@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <p>Hello world</p>
-      <Timer time="00:16:18:29"/>
+      <Timer time="00:00:00:05"/>
     </div>
   );
 }
