@@ -11,12 +11,10 @@ class Timer extends Component {
     }
 
     toTime = (s) => {
-        console.log(s);
         let days = Math.floor(s / 86400);
         let hours = Math.floor(s / 3600) - days * 24;
         let minutes = Math.floor(s / 60) - days * 1440 - hours * 60;
         let seconds = s - days * 86400 - hours * 3600 - minutes * 60;
-        console.log([days, hours, minutes, seconds]);
         return [days, hours, minutes, seconds];
     }
 
