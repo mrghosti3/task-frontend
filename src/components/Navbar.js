@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import NavbarList from './NavbarList';
 
-class Navbar extends Component {
+class Navbar extends React.Component {
     render() {
         return (
             <header>

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class NavbarList extends Component {
+class NavbarList extends React.Component {
     render() {
         return (
             <ul className="navbar-nav ml-auto">
