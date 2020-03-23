@@ -1,28 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import NavbarItem from './NavbarItem';
 
 class NavbarList extends React.Component {
     render() {
         return (
             <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                    <a href="#">Web Hosting</a>
-                </li>
-                <li className="nav-item">
-                    <a href="#">
-                        <p>on sale</p>
-                        Cloud Hosting
-                    </a>
-                </li>
-                <li className="nav-item">
-                    <a href="#">VPS Hosting</a>
-                </li>
-                <li className="nav-item">
-                    <a href="#">VPS Hosting</a>
-                </li>
-                <li className="nav-item">
-                    <a href="#">Website Builder</a>
-                </li>
+                {this.props.menuList.map((menuItem, index) => (
+                    <NavbarItem key={index} item={menuItem} />
+                ))}
             </ul>
         );
     }
