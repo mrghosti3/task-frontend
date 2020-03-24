@@ -3,14 +3,9 @@ import PropTypes from 'prop-types';
 import NavbarItem from './NavbarItem';
 
 class MenuNav extends React.Component {
-    addClasses = (show) => {
-        let classes = "menu-nav " + (show?"show":"");
-        return classes;
-    }
-
     render() {
         return (
-            <div id="navbarMenu" className={this.addClasses(this.props.show)}>
+            <div id="navbarMenu" className="menu-nav">
                 <ul>
                     {this.props.menuList.map((menuItem, index) => (
                         <NavbarItem key={index} classes="manu-item" item={menuItem} />
