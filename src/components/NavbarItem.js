@@ -11,7 +11,7 @@ class NavbarItem extends React.Component {
     render() {
         const {link, text, highlight} = this.props.item;
         return (
-            <li className="nav-item">
+            <li className={this.props.classes}>
                 {this.putHighlight(highlight)}
                 <a className="nav-link" href={link}>{text}</a>
             </li>
