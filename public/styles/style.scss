@@ -31,6 +31,14 @@ body {
     font-weight: 400;
 }
 
+#root {
+    width: 100vw;
+    height: 100vh;
+
+    $alpha: 0.3;
+    background-image: radial-gradient(rgba($color-gray-dark, $alpha), rgba($color-gray, $alpha));
+}
+
 a {
     text-decoration: none;
 }
@@ -47,13 +55,7 @@ a {
     transform: scaleX(-1);
 }
 
-#root {
-    width: 100vw;
-    height: 100vh;
 
-    $alpha: 0.3;
-    background-image: radial-gradient(rgba($color-gray-dark, $alpha), rgba($color-gray, $alpha));
-}
 
 header {
     $padding-x: 2rem;
