@@ -12,7 +12,7 @@ class Navbar extends React.Component {
         }
     }
 
-    toggleMenu(e) {
+    toggleMenu() {
         let show = !this.state.showMenu;
         this.setState({showMenu: show});
     }
@@ -31,7 +31,7 @@ class Navbar extends React.Component {
                         {this.props.header.brand.logo}
                     </a>
                     <button className="btn menu-toggle ml-auto" onClick={this.toggleMenu.bind(this)}>
-                        <span></span>
+                        <i className="fa fa-bars"></i>
                     </button>
                     <NavbarList menuList={this.props.header.menuList} />
                     {this.displayMenu(this.state.showMenu)}
