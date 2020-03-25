@@ -1,10 +1,15 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Timer from './components/Timer';
+import {ReactComponent as Logo} from './logo.svg';
 
 class App extends React.Component {
   state = {
     header: {
+      brand: {
+        logo: <Logo />,
+        link: window.location.origin.toString()
+      },
       menuList: [
         {
           link: '#',

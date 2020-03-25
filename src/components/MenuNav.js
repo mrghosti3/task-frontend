@@ -6,6 +6,9 @@ class MenuNav extends React.Component {
     render() {
         return (
             <div id="navbarMenu" className="menu-nav">
+                <button onClick={this.props.toggle}>
+                    <span></span>
+                </button>
                 <ul>
                     {this.props.menuList.map((menuItem, index) => (
                         <NavbarItem key={index} classes="manu-item" item={menuItem} />
@@ -17,7 +20,7 @@ class MenuNav extends React.Component {
 }
 
 MenuNav.propTypes = {
-    show: PropTypes.bool,
+    toggle: PropTypes.func.isRequired,
     menuList: PropTypes.array.isRequired
 }
 

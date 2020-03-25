@@ -19,7 +19,7 @@ class Navbar extends React.Component {
 
     displayMenu(showMenu) {
         if (showMenu) {
-            return <MenuNav menuList={this.props.header.menuList} />;
+            return <MenuNav toggle={this.toggleMenu.bind(this)} menuList={this.props.header.menuList} />;
         }
     }
 
@@ -27,7 +27,9 @@ class Navbar extends React.Component {
         let navbar = (
             <header>
                 <div className="navbar">
-                    <img src="./assets/logo.svg" alt="Hostinger" />
+                    <a className="nav-brand" href={this.props.header.brand.link}>
+                        {this.props.header.brand.logo}
+                    </a>
                     <button className="menu-toggle ml-auto" onClick={this.toggleMenu.bind(this)}>
                         <span></span>
                     </button>
