@@ -33,14 +33,26 @@ class App extends React.Component {
           text: 'WEBSITE BUILDER'
         }
       ]
-    }
+    },
+    priceTag: {
+      discount: '82%',
+      currency: '$',
+      price: 1.45,
+      occurance: '/mo'
+    },
+    services: [
+      'Garanteed 99.9% Uptime',
+      'Superior Speed Performance',
+      '24/7 Support Chat',
+      '30-Day Money-Back Guarantee'
+    ]
   }
 
   render() {
     return (
       <div>
         <Navbar header={this.state.header} />
-        <MainContent />
+        <MainContent tag={this.state.priceTag} services={this.state.services} />
       </div>
     );
   }
