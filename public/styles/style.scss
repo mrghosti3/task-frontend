@@ -1,4 +1,24 @@
-$main-color: #fff;
+$color-blue: #007bff;
+$color-indigo: #6610f2;
+$color-purple: #6f42c1;
+$color-pink: #e83e8c;
+$color-red: #dc3545;
+$color-orange: #fd7e14;
+$color-yellow: #ffc107;
+$color-green: #28a745;
+$color-teal: #20c997;
+$color-cyan: #17a2b8;
+$color-white: #fff;
+$color-gray: #6c757d;
+$color-gray-dark: #343a40;
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-info: #17a2b8;
+$color-warning: #ffc107;
+$color-danger: #dc3545;
+$color-light: #f8f9fa;
+$color-dark: #f5f5f5;
 
 body {
     margin: 0;
@@ -11,17 +31,20 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 
-    color: $main-color;
+    color: $color-white;
+    font-size: 17px;
+    font-weight: 400;
+}
 
-    a {
-        color: $main-color;
-        text-decoration: none;
-    }
+a {
+    text-decoration: none;
 }
 
 header {
-    padding-left: 2em;
-    padding-right: 2em;
+    $padding-x: 2rem;
+    padding-left: $padding-x;
+    padding-right: $padding-x;
+    margin-bottom: 5em;
 
     div {
         margin: auto;
@@ -30,23 +53,91 @@ header {
 }
 
 .navbar {
-    max-width: 900px;
+    max-width: 1200px;
+    padding-top: 20px;
 }
 
 .navbar-nav {
-    display: flex;
-
+    margin: 0;
     list-style: none;
 }
 
-.nav-item {
-    padding-right: 20px;
+.nav-brand {
+    margin-top: auto;
+    //margin-bottom: 0.5rem;
+}
 
+.nav-item {
+    display: inline-block;
+    padding-right: 2rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: $color-white;
+    transition: color 0.2s linear;
+}
+
+.menu-nav {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 10px;
+    background-color: $color-light;
+
+    ul {
+        width: 100%;
+    }
+
+    .nav-item {
+        color: $color-purple;
+
+        .nav-link {
+            color: $color-indigo;
+        }
+    }
+}
+
+.show {
+    display: block;
+}
+
+.menu-nav, .navbar-nav {
     p {
         margin: 0;
 
-        color: yellow;
-        font-size: 15px;
+        color: $color-yellow;
+        font-size: 11px;
+        transition: color 0.2s linear;
+    }
+}
+
+.nav-item:hover {
+    .nav-link {
+        color: $color-gray;
+    }
+
+    p {
+        color: $color-dark;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 990px) {
+    .navbar-nav {
+        display: none !important;
+    }
+
+    .nav-brand {
+        margin-bottom: auto;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 }
 
