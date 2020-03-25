@@ -7,7 +7,7 @@ class NavbarList extends React.Component {
         return (
             <ul className="navbar-nav ml-auto">
                 {this.props.menuList.map((menuItem, index) => (
-                    <NavbarItem key={index} classes="nav-item" highlightsFirst={true} item={menuItem} />
+                    <NavbarItem key={"navbar-"+index.toString()} classes="nav-item" highlightsFirst={true} item={menuItem} />
                 ))}
             </ul>
         );
