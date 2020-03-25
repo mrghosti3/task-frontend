@@ -10,7 +10,14 @@ class Timer extends React.Component {
         }
     }
 
-    toTime = (s) => {
+    timeFormat(t) {
+        if (t < 10) {
+            return `0${t}`;
+        }
+        return t;
+    }
+
+    toTime(s) {
         let days = Math.floor(s / 86400);
         let hours = Math.floor(s / 3600) - days * 24;
         let minutes = Math.floor(s / 60) - days * 1440 - hours * 60;
@@ -40,11 +47,29 @@ class Timer extends React.Component {
         let time = this.toTime(this.state.seconds);
 
         return (
-            <div>
-                <p>{time[0]}</p>
-                <p>{time[1]}</p>
-                <p>{time[2]}</p>
-                <p>{time[3]}</p>
+            <div className="row">
+                <div className="col">
+                    <i className="fa fa-caret-right text-red"></i>
+                </div>
+                <div className="col timer">
+                    <h3>{this.timeFormat(time[0])}</h3>
+                    <p>DAYS</p>
+                </div>
+                <div className="col timer">
+                    <h3>{this.timeFormat(time[1])}</h3>
+                    <p>HOURS</p>
+                </div>
+                <div className="col timer">
+                    <h3>{this.timeFormat(time[2])}</h3>
+                    <p>MINUTES</p>
+                </div>
+                <div className="col timer">
+                    <h3>{this.timeFormat(time[3])}</h3>
+                    <p>SECONDS</p>
+                </div>
+                <div className="col">
+                    <i className="fa fa-caret-left text-red"></i>
+                </div>
             </div>
         );
     }
