@@ -160,6 +160,10 @@ header {
 }
 
 @media only screen and (max-width: 990px) {
+    .navbar {
+        padding-top: 29px;
+    }
+
     .navbar-nav {
         display: none !important;
     }
