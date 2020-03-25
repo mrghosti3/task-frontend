@@ -47,23 +47,23 @@ class Timer extends React.Component {
         let time = this.toTime(this.state.seconds);
 
         return (
-            <div className="row">
+            <div className="row timer">
                 <div className="col">
                     <i className="fa fa-caret-right text-red"></i>
                 </div>
-                <div className="col timer">
+                <div className="col">
                     <h3>{this.timeFormat(time[0])}</h3>
                     <p>DAYS</p>
                 </div>
-                <div className="col timer">
+                <div className="col">
                     <h3>{this.timeFormat(time[1])}</h3>
                     <p>HOURS</p>
                 </div>
-                <div className="col timer">
+                <div className="col">
                     <h3>{this.timeFormat(time[2])}</h3>
                     <p>MINUTES</p>
                 </div>
-                <div className="col timer">
+                <div className="col">
                     <h3>{this.timeFormat(time[3])}</h3>
                     <p>SECONDS</p>
                 </div>
