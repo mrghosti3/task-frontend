@@ -6,14 +6,14 @@ class MenuNav extends React.Component {
     render() {
         return (
             <div id="navbarMenu" className="menu-nav">
-                <button onClick={this.props.toggle}>
-                    <span></span>
-                </button>
                 <ul>
                     {this.props.menuList.map((menuItem, index) => (
                         <NavbarItem key={index} classes="manu-item" item={menuItem} />
                     ))}
                 </ul>
+                <button onClick={this.props.toggle}>
+                    <span></span>
+                </button>
             </div>
         );
     }
