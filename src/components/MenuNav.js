@@ -8,10 +8,10 @@ class MenuNav extends React.Component {
             <div id="navbarMenu" className="menu-nav">
                 <ul>
                     {this.props.menuList.map((menuItem, index) => (
-                        <NavbarItem key={index} classes="manu-item" item={menuItem} />
+                        <NavbarItem key={index} classes="manu-item" highlightsFirst={false} item={menuItem} />
                     ))}
                 </ul>
-                <button onClick={this.props.toggle}>
+                <button className="btn" onClick={this.props.toggle}>
                     <span></span>
                 </button>
             </div>

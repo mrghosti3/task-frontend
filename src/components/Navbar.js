@@ -30,7 +30,7 @@ class Navbar extends React.Component {
                     <a className="nav-brand" href={this.props.header.brand.link}>
                         {this.props.header.brand.logo}
                     </a>
-                    <button className="menu-toggle ml-auto" onClick={this.toggleMenu.bind(this)}>
+                    <button className="btn menu-toggle ml-auto" onClick={this.toggleMenu.bind(this)}>
                         <span></span>
                     </button>
                     <NavbarList menuList={this.props.header.menuList} />
