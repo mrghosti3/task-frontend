@@ -19,7 +19,7 @@ class MenuNav extends React.Component {
                         <NavbarItem key={index} classes="menu-item" highlightsFirst={false} item={menuItem} />
                     ))}
                 </ul>
-                <button className="btn" onClick={this.props.toggle}>
+                <button className="nav-btn" onClick={this.props.toggle}>
                     <i className="fa fa-times"></i>
                 </button>
             </div>
