@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Timer from './components/Timer';
-import {ReactComponent as Logo} from './logo.svg';
+import MainContent from './components/MainContent';
+import {ReactComponent as Logo} from './assets/logo.svg';
 
 class App extends React.Component {
   state = {
@@ -40,8 +40,7 @@ class App extends React.Component {
     return (
       <div>
         <Navbar header={this.state.header} />
-        <p>Hello world</p>
-        <Timer time="00:00:00:05"/>
+        <MainContent />
       </div>
     );
   }
