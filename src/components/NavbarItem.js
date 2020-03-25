@@ -2,24 +2,41 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class NavbarItem extends React.Component {
-    putHighlight = (highlight) => {
+    getItemContent(item, highlightsFirst) {
+        const {link, text, highlight} = item;
+        let out;
+
         if (highlight !== undefined) {
-            return (<p>{highlight}</p>);
+            if (highlightsFirst) {
+                out = [
+                    (<p>{highlight}</p>),
+                    (<a className="nav-link" href={link}>{text}</a>)
+                ];
+            } else {
+                out = [
+                    (<a className="nav-link" href={link}>{text}</a>),
+                    (<p>{highlight}</p>)
+                ];
+            }
+        } else {
+            out = <a className="nav-link" href={link}>{text}</a>;
         }
+
+        return out;
     }
 
     render() {
-        const {link, text, highlight} = this.props.item;
         return (
             <li className={this.props.classes}>
-                {this.putHighlight(highlight)}
-                <a className="nav-link" href={link}>{text}</a>
+                {this.getItemContent(this.props.item, this.props.highlightsFirst)}
             </li>
         );
     }
 }
 
 NavbarItem.protTypes = {
+    classes: PropTypes.string,
+    highlightsFirst: PropTypes.bool.isRequired,
     item: PropTypes.object.isRequired
 }
 
