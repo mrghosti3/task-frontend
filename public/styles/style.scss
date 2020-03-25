@@ -74,7 +74,11 @@ header {
 
 .menu-nav, .navbar-nav {
     margin: 0;
-    list-style: none;
+    font-weight: 600;
+
+    ul {
+        list-style: none;
+    }
 
     p {
         margin: 0;
@@ -89,8 +93,6 @@ header {
     .nav-item {
         display: inline-block;
         padding-right: 2rem;
-        font-weight: 600;
-        color: $color-white;
     }
 
     .nav-link {
@@ -103,42 +105,49 @@ header {
     margin-bottom: -0.5rem;
 }
 
-.nav-link {
-    transition: color 0.2s linear;
-}
-
 .menu-nav {
+    display: none;
     position: absolute;
     top: 10px;
     left: 0;
     right: 0;
-    margin: 0 10px;
+    margin: 0 15px;
     padding: 30px;
     padding-bottom: 0;
     background-color: $color-light;
 
     ul {
         width: 100%;
+        padding: 0;
     }
 
-    .nav-item {
+    .menu-item {
+        color: $color-purple;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .nav-link {
         color: $color-purple;
     }
 
     p {
+        font-size: 17px;
         display: inline-block;
         vertical-align: middle;
-        margin-left: 20px;
+        margin-left: 15px;
+
+        cursor: pointer;
+    }
+
+    i {
+        color: $color-purple !important;
     }
 }
 
-.nav-item:hover {
+.menu-item:hover {
     .nav-link {
-        color: $color-gray;
-    }
-
-    p {
-        color: $color-gray;
+        opacity: 0.6;
     }
 }
 
@@ -147,11 +156,47 @@ header {
 }
 
 .btn {
-    margin-bottom: 20px;
+    $dim: 40px;
+    height: $dim;
+    width: $dim;
+
+    padding: 0;
+    margin-bottom: 15px;
     margin-left: auto;
     margin-right: 0;
-    width: 30px;
-    height: 30px;
+    
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    i {
+        transform: scale(2.3);
+        color: $color-white;
+        opacity: 1;
+    }
+}
+
+.btn, .menu-item, .nav-item {
+    .nav-link, i {
+        opacity: 1;
+        transition: opacity 0.2s;
+    }
+}
+
+.btn:hover, .menu-item:hover, .nav-item:hover {
+    $dimmedOpacity: 0.6;
+
+    .nav-link {
+        opacity: $dimmedOpacity;
+    }
+
+    p {
+        opacity: $dimmedOpacity;
+    }
+
+    i {
+        opacity: $dimmedOpacity;
+    }
 }
 
 .main-content {
@@ -172,6 +217,10 @@ header {
         margin: 0;
     }
 
+    .menu-nav {
+        display: flex;
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -184,3 +233,11 @@ header {
 }
 
 @include margin-value("l", "left", auto);
+
+@mixin padding-value($pt, $name, $value) {
+    .p#{$pt}-#{$value}{
+        padding-#{$name}: #{$value}px;
+    }
+}
+
+@include padding-value("b", "bottom", 30);
