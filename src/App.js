@@ -13,24 +13,24 @@ class App extends React.Component {
       menuList: [
         {
           link: '#',
-          text: 'Web Hosting'
+          text: 'WEB HOSTING'
         },
         {
           link: '#',
-          text: 'Cloud Hosting',
-          highlight: 'on sale'
+          text: 'CLOUD HOSTING',
+          highlight: 'ON SALE'
         },
         {
           link: '#',
-          text: 'VPS Hosting'
+          text: 'VPS HOSTING'
         },
         {
           link: '#',
-          text: 'Domain checker'
+          text: 'DOMAIN CHECKER'
         },
         {
           link: '#',
-          text: 'Website Builder'
+          text: 'WEBSITE BUILDER'
         }
       ]
     }
