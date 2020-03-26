@@ -18,7 +18,7 @@ class PriceTag extends React.Component {
 
     render() {
         return (
-            <div className="col ml-auto price-tag">
+            <div className="col price-tag">
                 <div className="row discount">
                     <div className="discount-box">Save {this.state.discount}</div>
                     <div className="discount-arrow"></div>

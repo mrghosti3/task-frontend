@@ -48,7 +48,7 @@ class Timer extends React.Component {
 
         return (
             <div className="row timer">
-                <div className="col">
+                <div className="col arrow">
                     <i className="fa fa-caret-right text-red"></i>
                 </div>
                 <div className="col">
