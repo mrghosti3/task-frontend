@@ -12,6 +12,8 @@ module.exports = grunt => {
                     scssSrc + 'base.scss',
                     scssSrc + 'navbar.scss',
                     scssSrc + 'main_content.scss',
+                    scssSrc + 'price_tag.scss',
+                    scssSrc + 'timer.scss',
                     scssSrc + 'service.scss'
                 ],
                 dest: scssSrc + 'style.scss'
