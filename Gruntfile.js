@@ -7,8 +7,8 @@ module.exports = grunt => {
         concat: {
             dist: {
                 src: [
-                    scssSrc + 'global_vars.scss',
-                    scssSrc + 'global_classes.scss',
+                    scssSrc + 'global-vars.scss',
+                    scssSrc + 'global-classes.scss',
                     scssSrc + 'base.scss',
                     scssSrc + 'navbar.scss',
                     scssSrc + 'main_content.scss',
