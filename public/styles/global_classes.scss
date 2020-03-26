@@ -1,0 +1,75 @@
+@mixin text-color($name, $color) {
+    .text-#{$name} {
+        color: $color;
+    }
+}
+
+@include text-color("blue", $color-blue);
+@include text-color("blue", $color-blue);
+@include text-color("indigo", $color-indigo);
+@include text-color("purple", $color-purple);
+@include text-color("pink", $color-pink);
+@include text-color("red", $color-red);
+@include text-color("orange", $color-orange);
+@include text-color("yellow", $color-yellow);
+@include text-color("green", $color-green);
+@include text-color("teal", $color-teal);
+@include text-color("cyan", $color-cyan);
+@include text-color("white", $color-white);
+@include text-color("gray", $color-gray);
+@include text-color("gray-dark", $color-gray-dark);
+@include text-color("primary", $color-primary);
+@include text-color("secondary", $color-secondary);
+@include text-color("success", $color-success);
+@include text-color("info", $color-info);
+@include text-color("warning", $color-warning);
+@include text-color("danger", $color-danger);
+@include text-color("light", $color-light);
+@include text-color("dark", $color-dark);
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+@mixin margin-value($pt, $name, $value) {
+    .m#{$pt}-#{$value} {
+        margin-#{$name}: #{$value}px;
+    }
+}
+
+@include margin-value("t", "top", 15);
+@include margin-value("l", "left", 15);
+@include margin-value("r", "right", 10);
+
+@mixin padding-value($pt, $name, $value) {
+    .p#{$pt}-#{$value}{
+        padding-#{$name}: #{$value}px;
+    }
+}
+
+@include padding-value("b", "bottom", 30);
+
+@mixin text-align($name) {
+    .text-#{$name} {
+        text-align: $name;
+    }
+}
+@include text-align(center);
+
+@mixin display-set($disp) {
+    .d-#{$disp} {
+        display: $disp;
+    }
+}
+@include display-set(relative);
+
+@mixin position($name, $value) {
+    .pos-#{$name}-#{$value} {
+        #{$name}: #{$value}px;
+    }
+}
+@include position(bottom, 0);

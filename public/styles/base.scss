@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    font-family: Muli, sans-serif;
+    margin: 0;
+
+    background-color: #212940;
+    color: $color-white;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+#root {
+    min-height: 99vh;
+
+    $alpha: 0.3;
+    background-color: rgba($color-indigo, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+}

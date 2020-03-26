@@ -1,0 +1,166 @@
+header {
+    $padding-x: 60px;
+    padding-left: $padding-x;
+    padding-right: $padding-x;
+    height: $header-height;
+
+    div {
+        margin: auto;
+        display: flex;
+    }
+}
+
+.navbar {
+    max-width: 1200px;
+    padding-top: 20px;
+}
+
+.menu-nav, .navbar-nav {
+    margin: 0;
+    font-weight: 600;
+    text-transform: capitalize;
+
+    ul {
+        list-style: none;
+    }
+
+    p {
+        margin: 0;
+
+        color: $color-yellow;
+        font-size: 11px;
+        transition: color 0.2s linear;
+    }
+}
+
+.navbar-nav {
+    .nav-item {
+        display: inline-block;
+        padding-right: 2rem;
+    }
+
+    .nav-link {
+        color: $color-white;
+    }
+}
+
+.nav-brand {
+    margin-top: auto;
+    margin-bottom: -0.5rem;
+}
+
+.menu-nav {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 15px;
+    padding: 30px;
+    padding-bottom: 0;
+    background-color: $color-light;
+
+    ul {
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-item {
+        color: $color-purple;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .nav-link {
+        color: $color-purple;
+    }
+
+    p {
+        font-size: 17px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 15px;
+
+        cursor: pointer;
+    }
+
+    i {
+        color: $color-purple !important;
+    }
+}
+
+.menu-item:hover {
+    .nav-link {
+        opacity: 0.6;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav-btn {
+    $dim: 40px;
+    height: $dim;
+    width: $dim;
+
+    padding: 0;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: 0;
+    
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    i {
+        transform: scale(2.3);
+        color: $color-white;
+        opacity: 1;
+    }
+}
+
+.nav-btn, .menu-item, .nav-item {
+    .nav-link, i {
+        opacity: 1;
+        transition: opacity 0.2s;
+    }
+}
+
+.nav-btn:hover, .menu-item:hover, .nav-item:hover {
+    $dimmedOpacity: 0.6;
+
+    .nav-link {
+        opacity: $dimmedOpacity;
+    }
+
+    p {
+        opacity: $dimmedOpacity;
+    }
+
+    i {
+        opacity: $dimmedOpacity;
+    }
+}
+
+@media only screen and (max-width: 1160px) {
+    .navbar {
+        padding-top: 29px;
+    }
+
+    .navbar-nav {
+        display: none !important;
+    }
+
+    .nav-brand {
+        margin: 0;
+    }
+
+    .menu-nav {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
