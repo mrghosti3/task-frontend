@@ -8,7 +8,7 @@ import bgImage from '../assets/background.jpg';
 class MainContent extends React.Component {
     render() {
         return (
-            <div className="main-content">
+            <div className="main-content pb-30">
                 <div className="main-background" style={{ backgroundImage: `url(${bgImage})` }}></div>
                 <div className="content">
                     <dir className="row">
