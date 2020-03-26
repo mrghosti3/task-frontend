@@ -27,7 +27,10 @@ class PriceTag extends React.Component {
                 </div>
                 <div className="row price">
                     <div className="col">
-                        <h1>{this.state.currency} <span>{this.state.main}</span></h1>
+                        <h1>{this.state.currency}</h1>
+                    </div>
+                    <div className="col">
+                        <h1><span>{this.state.main}</span></h1>
                     </div>
                     <div className="col">
                         <h1>{this.state.cents}</h1>
