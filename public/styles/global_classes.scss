@@ -73,3 +73,13 @@
     }
 }
 @include position(bottom, 0);
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    margin-left: auto;
+    margin-right: auto;
+}
