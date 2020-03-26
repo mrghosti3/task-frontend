@@ -1,5 +1,3 @@
-@import "global-vars.scss";
-
 @mixin text-color($name, $color) {
     .text-#{$name} {
         color: $color;
