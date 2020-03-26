@@ -1,6 +1,6 @@
 module.exports = grunt => {
     const sass = require('sass');
-    const scssSrc = 'public/styles/';
+    const scssSrc = 'src/styles/';
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -16,7 +16,7 @@ module.exports = grunt => {
                     scssSrc + 'timer.scss',
                     scssSrc + 'service.scss'
                 ],
-                dest: scssSrc + 'style.scss'
+                dest: 'public/styles/style.scss'
             }
         },
         sass: {
