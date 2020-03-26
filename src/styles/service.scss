@@ -1,11 +1,12 @@
 .services {
-    > .col:not(:last-child) {
+    & > .col:not(:last-child) {
         margin-right: auto;
+
+        p {
+            padding-right: 20px;
+        }
     }
 
-    .col {
-        margin-top: 10px;
-    }
     p {
         font-size: 15px;
     }

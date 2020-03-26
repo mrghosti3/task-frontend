@@ -1,6 +1,5 @@
 .main-content {
     margin-top: -$header-height;
-    //padding-top: 5rem;
 }
 
 .main-background {
@@ -18,11 +17,11 @@
 .content {
     padding-top: 70px;
 
-    .row {
+    & > .row {
         max-width: 900px;
         margin: auto;
-        margin-top: 2.2em;
-
+        margin-top: 4em;
+    
         $padding-x: 2rem;
         padding-right: $padding-x;
         padding-left: $padding-x;
@@ -45,9 +44,5 @@
 @media only screen and (max-width: 900px) {
     .main-background {
         background-position: 70% 10%;
-    }
-
-    .col {
-        margin: auto;
     }
 }

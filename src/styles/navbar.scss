@@ -89,12 +89,6 @@ header {
     }
 }
 
-.menu-item:hover {
-    .nav-link {
-        opacity: 0.6;
-    }
-}
-
 .menu-toggle {
     display: none;
 }
@@ -125,21 +119,21 @@ header {
         opacity: 1;
         transition: opacity 0.2s;
     }
-}
 
-.nav-btn:hover, .menu-item:hover, .nav-item:hover {
-    $dimmedOpacity: 0.6;
+    &:hover {
+        $dimmedOpacity: 0.6;
 
-    .nav-link {
-        opacity: $dimmedOpacity;
-    }
-
-    p {
-        opacity: $dimmedOpacity;
-    }
-
-    i {
-        opacity: $dimmedOpacity;
+        .nav-link {
+            opacity: $dimmedOpacity;
+        }
+    
+        p {
+            opacity: $dimmedOpacity;
+        }
+    
+        i {
+            opacity: $dimmedOpacity;
+        }
     }
 }
 
