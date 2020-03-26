@@ -20,48 +20,39 @@ $color-danger: #dc3545;
 $color-light: #f8f9fa;
 $color-dark: #f5f5f5;
 
+$header-height: 55px;
+
 body {
     margin: 0;
     font-family: Muli, sans-serif;
     margin: 0;
 
-    background-color: $color-white;
+    background-color: #212940;
     color: $color-white;
     font-size: 17px;
     font-weight: 400;
 }
 
 #root {
-    width: 100vw;
-    height: 100vh;
+    min-height: 99vh;
 
     $alpha: 0.3;
-    background-image: radial-gradient(rgba($color-gray-dark, $alpha), rgba($color-gray, $alpha));
+    background-color: rgba($color-indigo, 0.1);
+}
+
+h2 {
+    font-size: 24px;
 }
 
 a {
     text-decoration: none;
 }
 
-.main-background {
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 10%;
-    transform: scaleX(-1);
-}
-
-
-
 header {
-    $padding-x: 2rem;
+    $padding-x: 60px;
     padding-left: $padding-x;
     padding-right: $padding-x;
-    height: 55px;
+    height: $header-height;
 
     div {
         margin: auto;
@@ -77,6 +68,7 @@ header {
 .menu-nav, .navbar-nav {
     margin: 0;
     font-weight: 600;
+    text-transform: capitalize;
 
     ul {
         list-style: none;
@@ -157,7 +149,7 @@ header {
     display: none;
 }
 
-.btn {
+.nav-btn {
     $dim: 40px;
     height: $dim;
     width: $dim;
@@ -178,14 +170,14 @@ header {
     }
 }
 
-.btn, .menu-item, .nav-item {
+.nav-btn, .menu-item, .nav-item {
     .nav-link, i {
         opacity: 1;
         transition: opacity 0.2s;
     }
 }
 
-.btn:hover, .menu-item:hover, .nav-item:hover {
+.nav-btn:hover, .menu-item:hover, .nav-item:hover {
     $dimmedOpacity: 0.6;
 
     .nav-link {
@@ -202,11 +194,23 @@ header {
 }
 
 .main-content {
-    margin-top: -55px;
+    margin-top: -$header-height;
     //padding-top: 5rem;
 }
 
-@media only screen and (max-width: 990px) {
+.main-background {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 10%;
+    transform: scaleX(-1);
+}
+
+@media only screen and (max-width: 1160px) {
     .navbar {
         padding-top: 29px;
     }
@@ -228,13 +232,121 @@ header {
     }
 }
 
-@mixin margin-value($pt, $name, $value) {
-    .m#{$pt}-#{$value} {
-        margin-#{$name}: $value;
+
+
+.content {
+    padding-top: 70px;
+
+    .row {
+        max-width: 900px;
+        margin: auto;
+        margin-top: 2.2em;
+
+        $padding-x: 2rem;
+        padding-right: $padding-x;
+        padding-left: $padding-x;
     }
 }
 
-@include margin-value("l", "left", auto);
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timer {
+    padding: 0 !important;
+
+    h3 {
+        margin: 0;
+        margin-bottom: 5px;
+
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    p {
+        margin: 0;
+        font-size: 10px;
+        letter-spacing: 1;
+        line-height: 1;
+        font-weight: 900;
+    }
+
+    > * {
+        display: block;
+    }
+}
+
+.fa-caret-right, .fa-caret-left {
+    transform: scale(2.3);
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 0;
+}
+
+.btn {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 2em;
+    border-radius: 5px;
+    
+    background-color: $color-red;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.price {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+.services {
+    width: 88vh;
+    
+
+    > .col:not(:last-child) {
+        margin-right: auto;
+    }
+
+    .col {
+        margin-top: 10px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .main-background {
+        background-position: 70% 10%;
+    }
+
+    .col {
+        margin: auto;
+    }
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+@mixin margin-value($pt, $name, $value) {
+    .m#{$pt}-#{$value} {
+        margin-#{$name}: #{$value}px;
+    }
+}
+
+@include margin-value("t", "top", 15);
+@include margin-value("l", "left", 15);
+@include margin-value("r", "right", 10);
 
 @mixin padding-value($pt, $name, $value) {
     .p#{$pt}-#{$value}{
@@ -243,3 +355,53 @@ header {
 }
 
 @include padding-value("b", "bottom", 30);
+
+@mixin text-color($name, $color) {
+    .text-#{$name} {
+        color: $color;
+    }
+}
+
+@include text-color("blue", $color-blue);
+@include text-color("blue", $color-blue);
+@include text-color("indigo", $color-indigo);
+@include text-color("purple", $color-purple);
+@include text-color("pink", $color-pink);
+@include text-color("red", $color-red);
+@include text-color("orange", $color-orange);
+@include text-color("yellow", $color-yellow);
+@include text-color("green", $color-green);
+@include text-color("teal", $color-teal);
+@include text-color("cyan", $color-cyan);
+@include text-color("white", $color-white);
+@include text-color("gray", $color-gray);
+@include text-color("gray-dark", $color-gray-dark);
+@include text-color("primary", $color-primary);
+@include text-color("secondary", $color-secondary);
+@include text-color("success", $color-success);
+@include text-color("info", $color-info);
+@include text-color("warning", $color-warning);
+@include text-color("danger", $color-danger);
+@include text-color("light", $color-light);
+@include text-color("dark", $color-dark);
+
+@mixin text-align($name) {
+    .text-#{$name} {
+        text-align: $name;
+    }
+}
+@include text-align(center);
+
+@mixin display-set($disp) {
+    .d-#{$disp} {
+        display: $disp;
+    }
+}
+@include display-set(relative);
+
+@mixin position($name, $value) {
+    .pos-#{$name}-#{$value} {
+        #{$name}: #{$value}px;
+    }
+}
+@include position(bottom, 0);

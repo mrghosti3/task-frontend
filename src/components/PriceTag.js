@@ -18,11 +18,12 @@ class PriceTag extends React.Component {
 
     render() {
         return (
-            <div className="col">
-                <div className="row">
-                    <div className="">Save {this.state.discount}</div>
+            <div className="col ml-auto price-tag">
+                <div className="row discount">
+                    <div className="discount-box">Save {this.state.discount}</div>
+                    <div className="discount-arrow"></div>
                 </div>
-                <div className="row">
+                <div className="row price">
                     <div className="col">
                         <h1>{this.state.currency} <span>{this.state.main}</span></h1>
                     </div>
