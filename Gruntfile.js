@@ -11,8 +11,8 @@ module.exports = grunt => {
                     scssSrc + 'global-classes.scss',
                     scssSrc + 'base.scss',
                     scssSrc + 'navbar.scss',
-                    scssSrc + 'main_content.scss',
-                    scssSrc + 'price_tag.scss',
+                    scssSrc + 'main-content.scss',
+                    scssSrc + 'price-tag.scss',
                     scssSrc + 'timer.scss',
                     scssSrc + 'service.scss'
                 ],
