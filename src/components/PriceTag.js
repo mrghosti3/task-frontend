@@ -20,8 +20,10 @@ class PriceTag extends React.Component {
         return (
             <div className="col price-tag">
                 <div className="row">
-                    <div className="discount-box">Save {this.state.discount}</div>
-                    <div className="discount-arrow"></div>
+                    <div className="col discount">
+                        <div className="discount-box">Save {this.state.discount}</div>
+                        <div className="discount-arrow"></div>
+                    </div>
                 </div>
                 <div className="row price">
                     <div className="col">
