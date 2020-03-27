@@ -11,7 +11,7 @@ class MainContent extends React.Component {
             <div className="main-content pb-30">
                 <div className="main-background" style={{ backgroundImage: `url(${bgImage})` }}></div>
                 <div className="content">
-                    <dir className="row">
+                    <dir className="row banner">
                         <div className="col">
                             <h2 className="ml-15">
                                 New Year Offer <br/>

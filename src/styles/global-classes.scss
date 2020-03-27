@@ -60,20 +60,6 @@
 }
 @include text-align(center);
 
-@mixin display-set($disp) {
-    .d-#{$disp} {
-        display: $disp;
-    }
-}
-@include display-set(relative);
-
-@mixin position($name, $value) {
-    .pos-#{$name}-#{$value} {
-        #{$name}: #{$value}px;
-    }
-}
-@include position(bottom, 0);
-
 .row {
     display: flex;
     flex-wrap: wrap;
