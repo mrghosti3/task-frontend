@@ -10,14 +10,14 @@ body {
 }
 
 #root {
-    min-height: 99vh;
+    min-height: 100vh;
 
     $alpha: 0.6;
-    background-color: rgba($color-indigo, 0.1);
+    background-color: rgba($color-indigo, 0.25);
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 35px;
 }
 
 a {
