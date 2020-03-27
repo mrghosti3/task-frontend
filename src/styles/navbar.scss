@@ -59,7 +59,10 @@ header {
     margin: 0 15px;
     padding: 30px;
     padding-bottom: 0;
+    max-height: 80vh;
     background-color: $color-light;
+    overflow-y: scroll;
+    border-radius: 5px;
 
     ul {
         width: 100%;
