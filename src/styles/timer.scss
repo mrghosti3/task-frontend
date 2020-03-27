@@ -2,6 +2,14 @@
     padding: 0 !important;
     text-align: center;
 
+    & > .col {
+        display: inline-block;
+
+        &:first-child, &:last-child {
+            display: flex;
+        }
+    }
+
     h3 {
         margin: 0;
         margin-bottom: 5px;
@@ -20,10 +28,9 @@
     }
 
     i {
-        transform: scale(2.3);
         margin-top: auto;
         margin-bottom: auto;
-    
+        transform: scale(2.3);
         position: relative;
         z-index: -1;
     }
